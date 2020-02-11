@@ -1,0 +1,22 @@
+{
+
+  "description": "Visualize document elements with z-index CSS property.",
+  "manifest_version": 2,
+  "name": "z-index visualizer",
+  "version": "1.0",
+  "homepage_url": "https://github.com/mdn/webextensions-examples/tree/master/open-my-page-button",
+  "icons": {
+    "32": "icons/icon.svg"
+  },
+  "page_action": {
+    "default_icon": "icons/z-index-visualizer-off.svg",
+    "default_title": "z-index visualizer"
+  },
+  "background": {
+    "scripts": ["background_scripts/index.js"]
+  },
+  "permissions": [
+    "activeTab",
+    "tabs"
+  ]
+}
