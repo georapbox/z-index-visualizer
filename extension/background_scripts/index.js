@@ -42,6 +42,7 @@ browser.tabs.query({}).then((tabs) => {
 
 browser.tabs.onUpdated.addListener((id, changeInfo, tab) => {
   initializePageAction(tab);
+  browser.tabs.executeScript({file: 'content_scripts/delete-z-index.js', allFrames: true});
 });
 
 browser.pageAction.onClicked.addListener(toggleZIndex);
