@@ -1,3 +1,7 @@
 # z-index visualizer
 
-A Firefox extension to visualize z-index
+Firefox Add-on to visualize elements with z-index CSS property.
+
+### Screenshots
+
+![Screenshot 1](screenshots/screenshot_1.png)

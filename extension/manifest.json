@@ -1,6 +1,6 @@
 {
 
-  "description": "Visualize document elements with z-index CSS property.",
+  "description": "Visualize elements with z-index CSS property.",
   "manifest_version": 2,
   "name": "z-index visualizer",
   "version": "1.0",
