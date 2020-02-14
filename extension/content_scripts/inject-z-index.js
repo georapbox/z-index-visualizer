@@ -62,9 +62,12 @@
     overlay.setAttribute('data-section', 'z-index-visualizer');
     overlay.appendChild(label);
     document.body.appendChild(overlay);
+
+    label.style.top = `${label.getBoundingClientRect().top <= 30 ? 0 : -30}px`;
   };
 
-  const hasZIndexProperty = el => window.getComputedStyle(el).getPropertyValue('z-index') !== 'auto';
+  const hasValidZIndexProperty = el => window.getComputedStyle(el).getPropertyValue('z-index') !== 'auto'
+    && window.getComputedStyle(el).getPropertyValue('position') !== 'static';
 
-  Array.from(document.querySelectorAll('*')).filter(hasZIndexProperty).forEach(createLabel);
+  Array.from(document.querySelectorAll('*')).filter(hasValidZIndexProperty).forEach(createLabel);
 }());
