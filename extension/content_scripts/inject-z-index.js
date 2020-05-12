@@ -27,7 +27,7 @@
     const label = document.createElement('span');
 
     label.textContent = `z-index: ${zindex}`;
-    label.title = 'Click to log element';
+    label.title = `z-index: ${zindex} (Click to log element)`;
     label.onclick = () => console.log(element);
 
     overlay.style.cssText = `
