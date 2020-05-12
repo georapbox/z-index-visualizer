@@ -21,12 +21,12 @@ function toggleZIndex(tab) {
     if (title === TITLE_APPLY) {
       browser.pageAction.setIcon({tabId: tab.id, path: 'icons/z-index-visualizer-on.svg'});
       browser.pageAction.setTitle({tabId: tab.id, title: TITLE_REMOVE});
-      browser.tabs.executeScript({file: 'content_scripts/delete-z-index.js', allFrames: true});
-      browser.tabs.executeScript({file: 'content_scripts/inject-z-index.js', allFrames: true});
+      browser.tabs.executeScript({file: 'content_scripts/remove-z-index-labels.js', allFrames: true});
+      browser.tabs.executeScript({file: 'content_scripts/inject-z-index-labels.js', allFrames: true});
     } else {
       browser.pageAction.setIcon({tabId: tab.id, path: 'icons/z-index-visualizer-off.svg'});
       browser.pageAction.setTitle({tabId: tab.id, title: TITLE_APPLY});
-      browser.tabs.executeScript({file: 'content_scripts/delete-z-index.js', allFrames: true});
+      browser.tabs.executeScript({file: 'content_scripts/remove-z-index-labels.js', allFrames: true});
     }
   }
 
@@ -42,7 +42,7 @@ browser.tabs.query({}).then((tabs) => {
 
 browser.tabs.onUpdated.addListener((id, changeInfo, tab) => {
   initializePageAction(tab);
-  browser.tabs.executeScript({file: 'content_scripts/delete-z-index.js', allFrames: true});
+  browser.tabs.executeScript({file: 'content_scripts/remove-z-index-labels.js', allFrames: true});
 });
 
 browser.pageAction.onClicked.addListener(toggleZIndex);
