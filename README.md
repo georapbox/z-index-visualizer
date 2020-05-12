@@ -7,3 +7,6 @@ The extension was inspired by a similar tool of the awesome [VisBug](https://git
 ### Screenshots
 
 ![Screenshot 1](screenshots/screenshot_1.png)
+
+### License
+[The MIT License (MIT)](https://georapbox.mit-license.org/@2020)
